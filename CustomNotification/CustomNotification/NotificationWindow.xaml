@@ -4,12 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomNotification"
-        Width="320" Height="140"
+        Width="375" Height="125"
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#FF181818">
+        AllowsTransparency="True" Background="{x:Null}">
+
     <Grid>
-        
+        <Border CornerRadius="8" Background="#FF181818">
+            
+        </Border>
     </Grid>
+    
 </Window>
