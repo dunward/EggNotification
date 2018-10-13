@@ -24,5 +24,18 @@ namespace CustomNotification
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationWindow notificationWindow = new NotificationWindow();
+
+            notificationWindow.Width = SystemParameters.PrimaryScreenWidth / 4;
+            notificationWindow.Height = SystemParameters.PrimaryScreenHeight / 6;
+
+            notificationWindow.Left = SystemParameters.PrimaryScreenWidth - (SystemParameters.PrimaryScreenWidth / 4) - 20;
+            notificationWindow.Top = SystemParameters.PrimaryScreenHeight - (SystemParameters.PrimaryScreenHeight / 6) - 20;
+
+            notificationWindow.Show();
+        }
     }
 }

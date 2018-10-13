@@ -17,9 +17,9 @@ namespace CustomNotification
     /// <summary>
     /// Notification.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Notification : Window
+    public partial class NotificationWindow : Window
     {
-        public Notification()
+        public NotificationWindow()
         {
             InitializeComponent();
         }
