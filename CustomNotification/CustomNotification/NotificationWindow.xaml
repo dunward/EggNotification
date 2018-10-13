@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomNotification"
         mc:Ignorable="d"
-        Title="Notification" Height="450" Width="800">
+        Title="Notification" Height="450" Width="800"
+        Background="#FF181818">
     <Grid>
         
     </Grid>
