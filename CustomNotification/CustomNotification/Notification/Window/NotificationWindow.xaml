@@ -13,7 +13,7 @@
     
     
     <Grid>
-        <Border CornerRadius="8" Background="#FFAE1515" >
+        <Border CornerRadius="8" Background="#FF181818" >
             <!--Background="#FF181818" Black Color
                 Background="#FF357A0D" Green Color(Need Fix)
                 Background="#FFAE1515" Red Color
@@ -26,7 +26,7 @@
                 <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                        Margin="20,20,20,20"
                        Grid.Column="0" Source="/CustomNotification;component/Icon/test.png"/>
-                <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                <TextBlock x:Name="Message" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                            Margin="0,20,20,20"
                            Grid.Column="1" Text="CustomNotification Message Write in here ~~~ blablablablablabalaaa" Foreground="White" TextWrapping="Wrap"/>
             </Grid>

@@ -16,6 +16,7 @@ namespace CustomNotification
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Notification a = new Notification();
+            a.SetMessage("메시지 설정");
         }
     }
 }

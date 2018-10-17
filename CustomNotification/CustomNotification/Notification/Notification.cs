@@ -10,9 +10,11 @@ namespace CustomNotification
 {
     public class Notification
     {
+        NotificationWindow notificationWindow;
+
         public Notification()
         {
-            NotificationWindow notificationWindow = new NotificationWindow();
+            notificationWindow = new NotificationWindow();
 
             notificationWindow.Width = SystemParameters.PrimaryScreenWidth / 4;
             notificationWindow.Height = SystemParameters.PrimaryScreenHeight / 8;
@@ -23,6 +25,11 @@ namespace CustomNotification
             SystemSounds.Asterisk.Play();
 
             notificationWindow.Show();
+        }
+
+        public void SetMessage(string message)
+        {
+            notificationWindow.Message.Text = message;
         }
     }
 }
