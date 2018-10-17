@@ -27,6 +27,11 @@ namespace CustomNotification
             notificationWindow.Show();
         }
 
+        public void SetBackgroundColor()
+        {
+
+        }
+
         public void SetMessage(string message)
         {
             notificationWindow.Message.Text = message;
