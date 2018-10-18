@@ -5,12 +5,20 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 
 namespace CustomNotification
 {
     public class Notification
     {
+        #region Private Member
+
         NotificationWindow notificationWindow;
+        #endregion
+
+        #region Public Member
+        public NotificationAnchor anchor = NotificationAnchor.RightBottom;
+        #endregion
 
         public Notification()
         {
@@ -27,14 +35,21 @@ namespace CustomNotification
             notificationWindow.Show();
         }
 
-        public void SetBackgroundColor()
+        public void SetBackgroundColor(Color color)
         {
-
+            Brush brush = new SolidColorBrush(color);
+            notificationWindow.background.Background = brush;
         }
 
         public void SetMessage(string message)
         {
             notificationWindow.Message.Text = message;
+        }
+
+        public void SetRadius(int radius)
+        {
+            CornerRadius cornerRadius = new CornerRadius(radius);
+            notificationWindow.background.CornerRadius = cornerRadius;
         }
     }
 }
