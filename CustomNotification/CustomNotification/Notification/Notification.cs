@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CustomNotification;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -31,13 +33,11 @@ namespace EggNotification
             notificationWindow.Top = SystemParameters.PrimaryScreenHeight - (SystemParameters.PrimaryScreenHeight / 8) - 20;
 
             SystemSounds.Asterisk.Play();
-
-            notificationWindow.Show();
         }
 
-        public void SetBackgroundColor(Color color)
+        public void SetBackgroundColor(System.Windows.Media.Color color)
         {
-            Brush brush = new SolidColorBrush(color);
+            System.Windows.Media.Brush brush = new SolidColorBrush(color);
             notificationWindow.background.Background = brush;
         }
 
@@ -50,6 +50,28 @@ namespace EggNotification
         {
             CornerRadius cornerRadius = new CornerRadius(radius);
             notificationWindow.background.CornerRadius = cornerRadius;
+        }
+
+        public void SetFontFamily(System.Windows.Media.FontFamily font)
+        {
+            notificationWindow.Message.FontFamily = font;
+        }
+
+        public void SetFontSize(int size)
+        {
+            notificationWindow.Message.FontSize = size;
+        }
+
+        public void Show()
+        {
+            notificationWindow.Show();
+        }
+
+        public void SetImage(Bitmap image)
+        {
+            ImageSourceConverter source = new ImageSourceConverter();
+
+            notificationWindow.icon.Source = source.ConvertFrom(image) as ImageSource;
         }
     }
 }

@@ -22,6 +22,14 @@ namespace CustomNotification
         public NotificationWindow()
         {
             InitializeComponent();
+
+            ShowInTaskbar = false;
+            Topmost = true;
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Hide();
         }
     }
 }
